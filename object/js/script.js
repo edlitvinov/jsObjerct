@@ -1,21 +1,31 @@
 'use strict';
 
+//regExp - регулярные выражения, используются для проверки шаблонов
+const regex1 = /\w+/;
+const regex2 = new RegExp('\\w+');
+
+const str = 'JavaScript is cool language. Everybody should learn JavaScript';
+console.log(/JavaScript/i.test(str));
+console.log(str.replace(/JavaScript/ig, 'Java'));
+console.log(str);
+console.log(str.match(/JavaScript/ig));
+
 // errors
 
-function sum(a, b) {
-    if (typeof a !== 'number' || typeof b !== 'number') {
-        throw new Error ('не переданы числа для сложения');
-    }
-    return a + b;
-}
+// function sum(a, b) {
+//     if (typeof a !== 'number' || typeof b !== 'number') {
+//         throw new Error ('не переданы числа для сложения');
+//     }
+//     return a + b;
+// }
 
-try {
-    sum();
-} catch(err) {
-    console.error(err);
-}
+// try {
+//     sum();
+// } catch(err) {
+//     console.error(err);
+// }
 
-console.log('The END.');
+// console.log('The END.');
 
 // Object
 
